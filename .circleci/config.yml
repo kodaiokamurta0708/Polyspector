@@ -26,7 +26,10 @@ jobs:
             curl -sL https://rpm.nodesource.com/setup_6.x |  bash -
             yum install -y nodejs 
             node -v 
-            cd Polyspector/
+      - run:
+          name: install forever
+          working_directory: ~/Polyspector
+          command: |
             npm install
             npm install -g forever
              #[rabbitmq] edit /etc/selinux/config
