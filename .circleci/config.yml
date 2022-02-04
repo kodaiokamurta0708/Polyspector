@@ -11,7 +11,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
     # Be sure to update the tag on this image to a more stable version, using latest can result in unstable builds.
     docker:
-      - image: microsoft/dotnet:latest
+      - image: circleci/docker pull lanvv/centos7.5-yum:latest
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
@@ -20,11 +20,37 @@ jobs:
       # Then simply use the dotnet container as you'd expect and run your tests
       - run:
           # Update this line with the directory that contains your tests project file
-          working_directory: ~/project/App.Tests
-          name: Run tests
-          command: |
-            dotnet test
-
+          #working_directory: ~/project/App.Tests
+          name: library Installation
+          command:
+            #library Installation
+            curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+            yum install -y nodejs 
+            node -v 
+             #[forever] install forever
+            cd Polyspector/
+            npm install
+            npm install -g forever
+            #[rabbitmq] edit /etc/selinux/config
+            SELINUX=disabled
+             #install rabbitmq
+            yum install -y epel-release
+            yum install -y erlang
+            yum install -y rabbitmq-server 
+            systemctl start rabbitmq-server ; systemctl enable rabbitmq-server
+             #install 3rd party lib from npm
+            cd VisualizationPlatform/
+            npm install
+            npm install sqlite3 bower
+            bower install
+jobs:
+  test:
+    node server/start.js  PORT=8888
+ #default data list
+    node server/backend/worker_datalist/main.js
+ #default workers for sample data (csv, tsv)
+    node  server/backend/worker_csvtsv/main.js
+#Please Set Data at server/backend/worker_csvtsv/data/hoge.csv
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
