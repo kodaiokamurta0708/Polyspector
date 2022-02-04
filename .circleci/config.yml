@@ -23,7 +23,7 @@ jobs:
           #working_directory: ~/project/App.Tests
           name: library Installation
           command: 
-            curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+            curl -sL https://rpm.nodesource.com/setup_6.x |  bash -
             yum install -y nodejs 
             node -v 
             
