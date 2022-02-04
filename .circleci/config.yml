@@ -32,6 +32,7 @@ jobs:
           working_directory: Polyspector
           command: |
             yum install make -y
+            yum -y install gcc-c++
             npm install
             npm install -g forever
              #[rabbitmq] edit /etc/selinux/config
