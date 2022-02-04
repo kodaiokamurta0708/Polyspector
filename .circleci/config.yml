@@ -22,7 +22,7 @@ jobs:
           # Update this line with the directory that contains your tests project file
           #working_directory: ~/project/App.Tests
           name: library Installation
-          command: 
+          command: |
             curl -sL https://rpm.nodesource.com/setup_6.x |  bash -
             yum install -y nodejs 
             node -v 
