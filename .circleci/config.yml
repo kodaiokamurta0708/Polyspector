@@ -29,9 +29,9 @@ jobs:
       - checkout
       - run:
           name: install forever
-          working_directory: ~/Polyspector
+          working_directory: Polyspector
           command: |
-            npm init
+            yum install make -y
             npm install
             npm install -g forever
              #[rabbitmq] edit /etc/selinux/config
