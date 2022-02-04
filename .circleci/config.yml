@@ -26,7 +26,7 @@ jobs:
             curl -sL https://rpm.nodesource.com/setup_6.x |  bash -
             yum install -y nodejs 
             node -v 
-    
+      - checkout
       - run:
           name: install forever
           working_directory: ~/Polyspector
