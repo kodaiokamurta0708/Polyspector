@@ -32,7 +32,6 @@ jobs:
           name: install forever
           working_directory: /Polyspector
           command: |
-            nom init
             yum -y install make 
             yum -y install gcc-c++
             npm init -yes
