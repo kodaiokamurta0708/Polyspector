@@ -34,7 +34,7 @@ jobs:
             npm install -g forever
              #[rabbitmq] edit /etc/selinux/config
             SELINUX=disabled
-            install rabbitmq
+           
             yum install -y epel-release
             yum install -y erlang
             yum install -y rabbitmq-server 
