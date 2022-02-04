@@ -1,3 +1,4 @@
+
 # Use the latest 2.1 version of CircleCI pipeline process engine.
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
@@ -31,8 +32,10 @@ jobs:
           name: install forever
           working_directory: /Polyspector
           command: |
+            nom init
             yum -y install make 
             yum -y install gcc-c++
+            npm init -yes
             npm install
             npm install -g forever
              #[rabbitmq] edit /etc/selinux/config
