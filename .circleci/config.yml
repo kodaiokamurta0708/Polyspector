@@ -60,9 +60,9 @@ jobs:
       - run:
           name: install 3rd party lib via bower
           working_directory: /Polyspector
-          command: |      
+          command: |    
             npm install -g bower
-            bower install
+            bower install --allow-root
 
 
 #Please Set Data at server/backend/worker_csvtsv/data/hoge.csv
