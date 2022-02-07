@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-target_url = "http://ec2-18-176-56-94.ap-northeast-1.compute.amazonaws.com:8888/"
+target_url = "http://127.0.0.1:8888/"
 r = requests.get(target_url)
 soup = BeautifulSoup(r.text)
 title=soup.find("title")
