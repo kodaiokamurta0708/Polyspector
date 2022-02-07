@@ -60,7 +60,7 @@ jobs:
       - run:
           name: install Python
           command: |
-            install python3
+            yum install python3
       - run:
           name:  Python3*
           working_directory: /usr/bin
