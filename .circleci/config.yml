@@ -30,15 +30,19 @@ jobs:
       - checkout
       - run:
           name: install forever
-          working_directory: Polyspector
+          working_directory: /Polyspector
           command: |
             yum -y install make 
             yum -y install gcc-c++
             npm init -yes
             npm install
             npm install -g forever
-             #[rabbitmq] edit /etc/selinux/config
+      - run:
+          name: install forever
+          working_directory: /Polyspector
+          command: |
             sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
+             #[rabbitmq] edit /etc/selinux/config
             yum install -y epel-release
             yum install -y erlang
             yum install -y rabbitmq-server 
