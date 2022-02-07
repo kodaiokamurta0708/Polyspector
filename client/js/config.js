@@ -21,15 +21,16 @@ requirejs.config({
   baseUrl: '../', //main.js's parent folder
   map: {
       '*': {
-          //'css': 'assets/libs/css.min',
-	  'css': 'assets/libs/require-css/css.min'
+          'css': 'assets/libs/css.min',
+	  //'css': 'assets/libs/require-css/css.min'
       }
   },
   paths: {
     //basic libs
     backbone    : 'assets/libs/backbone/backbone-min',
     text        : 'assets/libs/requirejs-text/text',
-    underscore  : 'assets/libs/underscore/underscore-min',
+    //underscore  : 'assets/libs/underscore/underscore-min',
+    underscore  : 'assets/libs/underscore-min',
     jquery      : 'assets/libs/jquery/dist/jquery.min',
     bootstrap   : 'assets/libs/bootstrap/dist/js/bootstrap.min',
     stickit     : 'assets/libs/backbone.stickit/backbone.stickit', //replace pass variable  to template:  try to use it
