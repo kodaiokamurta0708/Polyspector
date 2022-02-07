@@ -65,7 +65,6 @@ jobs:
             ln -s python3 ./python
       - run:
           name:  Python setup
-          working_directory: /Polyspector
           command: |
 
             python -m pip install requests 
