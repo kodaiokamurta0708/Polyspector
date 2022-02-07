@@ -71,10 +71,10 @@ jobs:
           name:  Python setup
           working_directory: /Polyspector
           command: |
-          
-            pip install reqeuests
-            pip install bs4
-            pip install pytest
+
+            pip3.6 install reqeuests
+            pip3.6 install bs4
+            pip3.6 install pytest
 
 
       
