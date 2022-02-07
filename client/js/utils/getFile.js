@@ -6,11 +6,19 @@
     
 */
 
+/*
 define([
     'lib/html2canvas/index',
     'lib/stackBlur/index',
     'lib/rgbcolor/index',
     'lib/canvg/index'
+], function(){
+*/
+define([
+    'lib/canvg/html2canvas',
+    'lib/canvg/StackBlur',
+    'lib/canvg/rgbcolor',
+    'lib/canvg/canvg'
 ], function(){
   
   var MyClass= function(){};
