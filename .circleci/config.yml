@@ -75,6 +75,19 @@ jobs:
             python -m pip install requests 
             pip3.6 install bs4
             pip3.6 install pytest
+      - run:
+          name:  testsrever
+          working_directory: /root/project
+          command: |
+            node server/start.js  PORT=8888 &
+            node server/backend/worker_datalist/main.js &
+            node  server/backend/worker_csvtsv/main.js &
+            pytest test_name.py
+
+
+
+
+
 
 
       
