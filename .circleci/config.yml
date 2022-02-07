@@ -60,7 +60,7 @@ jobs:
       - run:
           name: install Python
           command: |
-            yum install python3
+            yum install python3 -y
       - run:
           name:  Python3*
           working_directory: /usr/bin
@@ -74,6 +74,9 @@ jobs:
             pip3.6 install --upgrade pip 
             pip install reqeuests
             pip install bs4
+            pip3 install pytest
+
+
       
           
 #Please Set Data at server/backend/worker_csvtsv/data/hoge.csv
