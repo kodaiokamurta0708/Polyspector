@@ -50,10 +50,14 @@ jobs:
              #[rabbitmq] edit /etc/selinux/config
              #sed -i "/SELINUX/s/enforcing/disabled/g" /etc/selinux/config
              #install 3rd party lib from npm
-            #cd VisualizationPlatform/
-            #npm install
-            #npm install sqlite3 bower
-            #bower install
+      - run:
+          name: install VisualizationPlatform
+          working_directory: /Polyspector
+          command: |
+            npm install
+            npm init -yes
+            npm install sqlite3 bower
+            bower install
 
 #Please Set Data at server/backend/worker_csvtsv/data/hoge.csv
 # Invoke jobs via workflows
