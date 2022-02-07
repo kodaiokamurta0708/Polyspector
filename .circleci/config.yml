@@ -73,8 +73,8 @@ jobs:
           command: |
 
             python -m pip install requests 
-             #pip3.6 install --user bs4
-            #pip3.6 install --user pytest
+            pip3.6 install bs4
+            pip3.6 install pytest
 
 
       
