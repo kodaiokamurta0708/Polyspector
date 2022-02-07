@@ -60,7 +60,8 @@ jobs:
       - run:
           name: install 3rd party lib via bower
           working_directory: /Polyspector
-          command: |    
+          command: |  
+            npm install -g bower  
             bower install --allow-root
             { "allow_root": true }
 
