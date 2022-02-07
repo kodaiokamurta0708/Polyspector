@@ -72,7 +72,7 @@ jobs:
           working_directory: /Polyspector
           command: |
             pip3.6 install --upgrade pip 
-            pip install reqeuests
+            pip3 install reqeuests
              #pip install bs4
              #python3 -m venv venv
              #. venv/bin/activate
