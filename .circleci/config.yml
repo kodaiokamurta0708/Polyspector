@@ -38,13 +38,14 @@ jobs:
             npm install
             npm install -g forever
       - run:
-          name: install forever
+          name: install rabbitmq
           working_directory: /Polyspector
           command: |
             yum install -y epel-release
             yum install -y erlang
             yum install -y rabbitmq-server 
-            systemctl start rabbitmq-server ; systemctl enable rabbitmq-server
+            CMD /usr/sbin/rabbitmq-server -detached
+              #systemctl start rabbitmq-server ; systemctl enable rabbitmq-server
               #sed -i -e 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
              #[rabbitmq] edit /etc/selinux/config
              #sed -i "/SELINUX/s/enforcing/disabled/g" /etc/selinux/config
