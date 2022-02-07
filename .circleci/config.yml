@@ -73,12 +73,12 @@ jobs:
           command: |
             pip3.6 install --upgrade pip 
             pip install reqeuests
-            pip install bs4
-            python3 -m venv venv
-            . venv/bin/activate
-            pip3 install pytest
-            pip3 install pytest-cov
-            pip3 install -e ./.
+             #pip install bs4
+             #python3 -m venv venv
+             #. venv/bin/activate
+             #pip install pytest
+            #pip install pytest-cov
+            #pip install -e ./.
 
 
       
