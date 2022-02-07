@@ -69,9 +69,12 @@ jobs:
             ln -s python3./python
       - run:
           name:  Python setup
+          working_directory: /Polyspector
           command: |
             pip3.6 install --upgrade pip 
-            ln -s python3./python
+            pip install reqeuests
+            pip install bs4
+      
 #Please Set Data at server/backend/worker_csvtsv/data/hoge.csv
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
