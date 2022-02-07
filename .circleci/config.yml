@@ -57,15 +57,6 @@ jobs:
             npm install
             npm init -yes
             npm install sqlite3 bower
-      - run:
-          name: install 3rd party lib via bower
-          working_directory: /Polyspector
-          command: |  
-            bower init　-yes
-            npm install -g bower 
-            bower install --allow-root
-            { "allow_root": true }
-
 
 #Please Set Data at server/backend/worker_csvtsv/data/hoge.csv
 # Invoke jobs via workflows
