@@ -15,7 +15,7 @@ jobs:
       - image: centos:centos7.5.1804
     # Add steps to the job
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    resource_class: xlarge
+    resource_class: 2xlarge
     steps:
       # Checkout the code as the first step.
       - checkout
