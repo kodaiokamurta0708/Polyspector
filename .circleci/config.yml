@@ -77,7 +77,7 @@ jobs:
             node server/start.js  PORT=8888 &
             node server/backend/worker_datalist/main.js &
             node  server/backend/worker_csvtsv/main.js &
-            pytest test_name.py
+            sleep 10; pytest test_name.py
 #Please Set Data at server/backend/worker_csvtsv/data/hoge.csv
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
